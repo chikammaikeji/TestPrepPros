@@ -1,0 +1,514 @@
+input {
+    padding: 0px;
+}
+
+body{
+    font-family: Verdana;
+    background: linear-gradient(to right, #280463, #1300e8);
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    padding: 5px;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+img{
+    max-width:100%;
+    padding: 0;
+}
+
+/*header*/
+header{
+    background-color: #ab231b;
+    grid-area: header;
+}
+
+.headerpic{
+    grid-area: headerpic;
+    padding: 5px;
+    height: 10vmax;
+}
+
+.headertext{
+    grid-area: headertext;
+    text-align: center;
+}
+
+.headerwrapper{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 25% auto;
+    grid-template-areas: "headerpic headertext";
+    
+}
+
+header h1{
+    font-size: 5vw;
+    color: #ffffff;
+    font-family: Impact;
+    text-shadow: 2px 2px 5px #3217ff;
+    margin: 0;
+    padding: 0;
+}
+
+header h3{
+    font-size: 3vw;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/*nav*/
+nav{
+    background-color: #226324;
+    grid-area: nav;
+}
+
+nav li {
+    padding:10px 10px;
+    list-style-type:none;
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+nav ul {
+    padding:0;
+}
+
+nav a {
+    text-decoration:none;
+    color:#ffffff;
+}
+
+nav a:hover {
+    text-shadow: 2px 2px 5px #3217ff;
+}
+
+/*main*/
+main{
+    background-color: #a4c4fe;
+    grid-area: main;
+}
+
+main em, i, strong, b{
+    padding: 0;
+}
+
+main a{
+    padding: 0;
+    color: #000080;
+}
+
+main h2{
+    color: #1231b0;
+    padding-top: 0;
+}
+
+main p{
+    color: #000080;
+    padding: 1% 2%;
+    font-size: 1em;
+}
+
+/*aside*/
+aside{
+    grid-area: aside;
+    background-color: #ffdd03;
+}
+
+aside h2{
+    color:#0000b0;
+    padding: 0;
+}
+
+aside a{
+    color:#0000b0;
+}
+
+aside ul{
+    padding-top: 0;
+}
+
+aside li{
+    font-size: 1.25em;
+    padding: 10px 0;
+    color: #0000b0;
+}
+
+/*articles*/
+.top{
+    grid-area: top;
+}
+
+.middle{
+    grid-area: middle;
+}
+
+.bottom{
+    grid-area: bottom;
+}
+
+article{
+    background-color: #0000b0;
+    color: #FFFFFF;
+}
+
+article h2{
+    text-align: center;
+    padding: 0;
+}
+
+article p{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*figures*/
+.fig1{
+    grid-area: fig1;
+}
+
+.fig2{
+    grid-area: fig2;
+    background-color: #FFFFFF;
+}
+
+section{
+    grid-area: section;
+    padding-bottom: 0;
+}
+
+figure{
+    margin: 0;
+    text-align: center;
+}
+
+figcaption{
+    padding: 5px;
+    color: #0000b0;
+    font-weight: bold;
+}
+
+figure img{
+    margin-top: 16px;
+    max-width:20em;
+    border:2px solid #0000b0;
+    padding: 0;
+    
+}
+
+figure a{
+    padding-left: 0;
+}
+
+/*audio and video*/
+audio {
+    max-width: 100%;
+    padding: 0;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.video, .audio {
+    margin: 0;
+    display: grid;
+    justify-content: space-around;
+}
+
+/*form*/
+form {
+    background-color: #FFA500;
+    width: 90%;
+    margin: auto;
+    color: white;
+    padding: 10px;
+}
+
+input {
+    margin: 1px 0 10px 0;
+}
+
+.button{
+    padding: 5px;
+    background-color: #a4c4fe;
+    color: #0000b0;
+}
+
+.call {
+    border-radius:5px;
+    text-align:center;
+    background-color:#0000b0;
+    width:60%;
+    padding: 5px;
+    margin:10px auto 0 auto;
+}
+
+.call p{
+    color:#ffffff;
+    font-size:1.5em;
+    padding:0;
+    margin:0;
+}
+
+.div1{
+    padding-bottom: 0px;
+}
+
+.div2{
+    padding-top: 0px;
+}
+
+/*footer*/
+footer{
+    background-color: #400057;
+    grid-area: footer;
+}
+
+footer p{
+    font-size: 1em;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+}
+
+/*---------------------------Mobile Layout----------------------------*/
+.container1 { /*for later*/
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap:.5em;
+  margin:1%;
+  padding: 0px;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+.container2{ /*for index.html*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 0.5em;
+    margin: 1%;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+}
+
+.container3{ /*for blog.html*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 0.5em;
+    margin: 1%;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "top"
+        "middle"
+        "bottom"
+        "footer";
+}
+
+.container4{ /*about.html*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 0.5em;
+    margin: 1%;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "fig2"
+        "footer";
+}
+
+/*This stuff is for the hamburger menu*/
+.toggleNav {
+    display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
+    text-align:center;
+    font-size:1.5em;
+    font-weight:bold;
+    padding:10px;
+}
+
+#flex-nav ul {
+    display: none; /*jQuery toggles the nav from to this class to the .open when clicked*/
+    text-align:center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+#flex-nav ul.open { /*.open is the class that gets toggled when clicked (with help from the jQuery code)*/
+    display:grid;
+}
+    
+#flex-nav li {
+    padding-left:10px;
+    padding-top:10px;
+}
+
+img {
+    max-width:100%;
+}
+
+/*-----------------------Tablet Media Query------------------------*/
+@media only screen and (min-width: 480px)  {
+.container1 {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 0.5em;
+    margin: 1%;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+}
+    .nestedgrid2{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "div1"
+        "div2";
+    }
+
+.container2{ /*index.html*/
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 0.5em;
+    margin: 1%;
+    grid-template-areas:
+        "header header"
+        "nav aside"
+        "main main"
+        "footer footer";
+}
+
+.container3{ /*blog.html*/
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 0.5em;
+    margin: 1%;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "top top"
+        "middle middle"
+        "bottom bottom"
+        "footer footer";
+}
+
+.container4{ /*about.html*/
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 0.5em;
+    margin: 1%;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "fig2 fig2"
+        "footer footer";
+}   
+    .nestedgrid{
+        display:grid;
+        grid-template-columns:100%;
+        grid-template-areas:
+        "section"
+        "fig1";
+    }
+
+/* Below will change from hamburger menu to side navigation*/
+  
+.toggleNav {
+    display: none; /*Makes the hamburger icon with the word "Menu" to disappear at this screen size*/
+}
+  
+#flex-nav ul {
+    display:grid;
+    text-align:left;
+}
+
+#flex-nav li {
+    padding-left:10px;
+    padding-top:10px;
+}
+}
+
+/*-----------------------Desktop Media Query------------------------*/
+@media only screen and (min-width: 960px)  {
+
+.container1{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: .5em;
+    margin: 1%;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+}
+    .nestedgrid2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "div1 div2"
+    }
+
+.container2{ /*index.html*/
+    display: grid;
+    grid-template-columns: auto 1fr 25%;
+    grid-gap: 0.5em;
+    margin: 1%;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+}
+
+.container3{ /*blog.html*/
+    display: grid;
+    grid-template-columns: auto 1fr 1.25fr;
+    grid-gap: 0.5em;
+    margin: 1%;
+    grid-template-areas:
+        "header header header"
+        "nav main top"
+        "nav main middle"
+        "nav main bottom"
+        "footer footer footer";
+}
+
+.container4{ /*about.html*/
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 0.5em;
+    margin: 1%;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "fig2 fig2"
+        "footer footer";
+}
+        .nestedgrid{
+        display:grid;
+        grid-template-columns:2fr 1fr;
+        grid-template-areas:
+        "section fig1";
+    }
+    
+
+}
