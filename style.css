@@ -1,3 +1,36 @@
+@media (prefers-reduced-motion: reduce) {
+    * {
+    animation: none !important;
+    transition: none !important;
+    }
+}
+
+@keyframes logo {
+    0% {
+    opacity: 0;
+    transform: translatey(-1em);
+    }
+    100% {
+    opacity: 1;
+    transform: translatey(0);
+    }
+}
+
+@keyframes words {
+    0% {
+    opacity: 0;
+    transform: translateX(1em);
+    }
+    50% {
+    opacity: .5;
+    transform: translateY(.1em);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);  
+    }
+}
+
 input {
     padding: 0px;
 }
@@ -6,7 +39,6 @@ body{
     font-family: Verdana;
     background: linear-gradient(to right, #280463, #1300e8);
     margin: 0;
-    padding: 0;
 }
 
 * {
@@ -32,6 +64,7 @@ header{
     grid-area: headerpic;
     padding: 5px;
     height: 10vmax;
+    animation: logo 0.5s;
 }
 
 .headertext{
@@ -55,6 +88,7 @@ header h1{
     text-shadow: 2px 2px 5px #3217ff;
     margin: 0;
     padding: 0;
+    animation: words 1.5s;
 }
 
 header h3{
@@ -62,6 +96,7 @@ header h3{
     color: #ffffff;
     margin: 0;
     padding: 0;
+    animation: words 2s;
 }
 
 /*nav*/
@@ -200,7 +235,12 @@ figure img{
     max-width:20em;
     border:2px solid #0000b0;
     padding: 0;
+    transition: all 0.5s ease-in-out;
     
+}
+
+figure img:hover{
+    transform: scale(1.1);
 }
 
 figure a{
@@ -230,7 +270,7 @@ form {
     background-color: #BD5B00;
     width: 90%;
     margin: auto;
-    color: white;
+    color: #ffffff;
     padding: 10px;
 }
 
@@ -245,19 +285,19 @@ input {
 }
 
 .call {
-    border-radius:5px;
-    text-align:center;
-    background-color:#0000b0;
-    width:60%;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #0000b0;
+    width: 60%;
     padding: 5px;
     margin:10px auto 0 auto;
 }
 
 .call p{
-    color:#ffffff;
-    font-size:1.5em;
-    padding:0;
-    margin:0;
+    color: #ffffff;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
 }
 
 .div1{
